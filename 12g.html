@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12f</title>
+</head>
+<body>
+    <!-- Imagine we're creating a messaging app. Use setInterval() and document.title to create the feature on the right (the title changes every 1 second). -->
+     <script>
+        setInterval(function() {
+            if(document.title === 'App') {
+                document.title = '(2) New messages';
+            } else {
+                document.title = 'App';
+            }
+        }, 1000)
+     </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11c</title>
+</head>
+<body>
+    <!-- Create a function arraySwap(array) that takes an array and returns an array where the first and last values are swapped (or switched).
+arraySwap([1, 20, 22, 24, 5]) => [5, 20, 22, 24, 1]
+arraySwap(['hi', 'hello', 'good']) => ['good', 'hello', 'hi'] -->
+
+    <script>
+        function arraySwap(array) { //Again on public demand we have to create a function name arraySwap which takes an array as a argument.
+            const first = array[0]; //So before swapping the value we first need to identify the first element. 
+
+            const lastindex = array.length-1; // Here we are storing the last index value inside lastindex variable.
+
+            const last = array[lastindex]; //And then need to identify the last element.
+
+            array[0] = last; //Here I am swapping the value of first element by last element.
+
+            array[lastindex] = first; //and the last value from the first one.
+
+            return array; //and then return the array 
+        }
+
+        const result = arraySwap([1, 20, 22, 24, 25]); //Here we are invoking the function and pass an array and storing it into a variable because we return the function.
+
+        console.log(result); //and then log that variable into console.
+    </script>
+</body>
+</html>

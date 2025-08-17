@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9h</title>
+</head>
+<body>
+    <input placeholder="Type Something..." class="js-input" onkeyup="
+        const inputElement = document.querySelector('.js-input');
+        document.querySelector('.js-message').innerHTML = inputElement.value;
+        "> <!--Here on the input tag we give 3 attribute "PLaceholder", "class", "onkeyup" onkeyup means when we press the key it gets down and when we release the key it gets up to we first let put js-input class into JS then we save it into a variable called inputELement and then below we create a paragraph and give it a class "js-message" and let put it into JS and then by using DOM we changed the content of that paragraph class we says that save what we are going to write in input.-->
+
+        <p class="js-message"></p> <!--That's why we can see what we type on the input as well as on the paragraph also.-->
+</body>
+</html>

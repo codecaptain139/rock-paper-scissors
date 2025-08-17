@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12d</title>
+</head>
+<body>
+    <!-- Continuing from exercise 12c, modify the button so that when we click it, the text immediately changes to 'Loading...', and then after 1 second, it changes to 'Finished!'. -->
+     <button class="js-button" onclick="updateButton()">Start</button>
+     <script>
+        function updateButton() {
+            const inputElement = document.querySelector('.js-button');
+            inputElement.innerText = 'Loading...';
+
+            setTimeout(function() { //It can take two parameter first we declare function and then timer for how long we want to delay the code.
+                inputElement.innerText = 'Finished!';
+        }, 1000);
+    };
+    </script>
+</body>
+</html>

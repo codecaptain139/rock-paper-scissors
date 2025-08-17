@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11k</title>
+</head>
+<body>
+    <!-- Create a function countPositive (nums) that takes an array of numbers and returns how many numbers in the array are greater than 0. countPositive [[- 2, 3, - 5, 7, 10]) =>3
+    countPositive ([1, - 3, 5]) =>2 -->
+    <script>
+        function countPositive(array) { //A.T.Q we create a function which takes an array and return a variable so for this we created a for loop.
+            let result = 0; //When we return something then we make an empty array or an object or a variable according to the need of the question and store it into that box.
+
+            for(let i = 0; i < array.length; i++) { //Again through this line of code we are accesing every single line of the code.
+                if(array[i] > 0) { //This is some if else condition which says that if array index i which is 0 is greater than 0 then add 1 in the result.
+                    result++; //Here we are adding 1 in the result.
+                }
+            }
+
+            return result; //And returning the result.
+        }
+
+        //Here we are invoking the function and log the value into the console according to the need.
+        console.log(countPositive([1, -3, 5])); 
+        console.log(countPositive([-2, 3, -5, 7, 10]));
+    </script>
+</body>
+</html>

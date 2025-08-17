@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Loops</title>
+</head>
+<body>
+    <script>
+        // const myArray = [
+        //     10,
+        //     20,
+        //     30
+        // ];
+        // console.log(myArray);
+
+        // console.log(myArray[2]);
+        // myArray[0] = 99;
+        // console.log(myArray);
+
+        // [1, 'hello', true, {name: 'socks' }, [1, 2]]
+
+        // console.log(typeof[1, 2]);
+        // console.log(Array.isArray([1, 2]));
+
+        // console.log(myArray.length);
+
+        // myArray.push(100);
+        // console.log(myArray);
+
+        // myArray.splice(0, 1);
+        // console.log(myArray);
+
+
+        // LOOP
+
+        // let i = 1;
+
+        // // While Loop
+        // while (i <= 5) {
+        //     console.log(i);
+        //     i++; //This will increase the value by 1
+        // }
+
+
+        // //For Loop
+        // for (let i = 1; i <= 5; i++) {
+        //     console.log(i);
+        // }
+
+
+        // let randomNumber = 0;
+
+        // while (randomNumber < 0.5) {
+        //     randomNumber = Math.random();
+        // }
+
+
+        // console.log(randomNumber);
+
+
+        // const todoList = [
+        //     'make dinner',
+        //     'wash dishes',
+        //     'watch youtube'
+        // ];
+
+
+        // for (let i = 0; index < todoList.length; i++) {
+        //     const value = todoList[i];
+        //     console.log(value);
+        // }
+
+        // Here we are learning Accumulator Pattern
+        // 1- Create a variable to store the result.
+        // 2 -Loop through the array and update the result.
+        // const nums = [1, 1, 3]; //We create an Array.
+        // let total = 0; //We create a variable to store the result.
+
+        // for (let i = 0; i < nums.length; i++) { //for loop with a variable i = 0, and a condition i should less than a nums array length and increament is increase the i with one
+        //     const num = nums[i]; //store every index value of nums array in num variable.
+        //     total += num; //This means we are adding total + nums;
+        // }
+
+        // console.log(total);
+
+
+
+        // // Second Question
+        // const numsDoubled = []; //For accumulated pattern we created a accumulated variable jismein hum ek Array ko save karenge.
+        //  for (let i = 0; i < nums.length; i++) { 
+        //     const num = nums[i];
+        //     numsDoubled.push(num*2);
+        //  };
+
+        //  console.log(numsDoubled);
+
+        const array1 = [1, 2, 3]; //Arrays are refrences it means [1, 2, 3] this gets saved somewhere in the memory 
+        const array2 = array1.slice(); //If we use this slice method then it will make a copy of array2 so basically now they are two different variable with same value. So if you update array1 it doesn't affect array2.
+        array2.push(4); //That's because here we push 4 into the array2 but it also automatically gets pushes into the array1.
+        console.log(array1);
+        console.log(array2);
+
+
+        // This is called destructuring means it is the short version to access the index of an array.
+        const [firstValue, secondValue] = [1, 2, 3];
+
+
+        //Loop to print counting from 1 to 10
+        for(let i = 1; i <= 10; i++) { //starts from i = 1 if its less than or equal to 10 then stop and iterate with i++;
+            if(i % 3 === 0) {
+                continue; //This continue is used to skip any value like here I am saying that if i = 3 then skip that value and print further.
+            }
+            console.log(i);
+            if(i === 8) {
+                break; // and here I am saying that if i  = 8 then break the loop means stop the loop.
+            }
+        }
+
+        let i = 1;
+        while (i <= 10) {
+            if(i % 3 === 0) {
+                i++;
+                continue; //This whole while is as simple as normal while loop but this continue method is just used to skip the index value.
+            }
+            console.log(i);
+            i++;
+        }
+
+
+        function doubleArray(nums) {
+        
+        const numsDoubled = []; //For accumulated pattern we created a accumulated variable jismein hum ek Array ko save karenge.
+         for (let i = 0; i < nums.length; i++) { 
+            const num = nums[i];
+            if(num === 0) {
+                return numsDoubled;
+            }
+            numsDoubled.push(num*2);
+         };
+
+         console.log(numsDoubled);
+    }
+
+    console.log(doubleArray([1, 2, 0, 3]));
+
+    </script>
+</body>
+</html>

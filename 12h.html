@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+<body>
+    <!-- - Continuing from 12g, instead of displaying "(2) New messages" every time, save the number of messages in a variable: let messages = 2;
+    Use the number in the variable to determine what title to display.
+    Create 2 buttons 'Add' / 'Remove' that increase / decrease the 'messages' variable by 1. -->
+    <button onclick="
+    message++;
+    ">Add</button>
+
+    <button onclick="
+    message--;
+    ">Remove</button>
+
+    <script>
+    let message = 2;
+    
+    setInterval(function(){
+        if(document.title === 'App') {
+            document.title = `(${message}) New messages`;
+        } else {
+            document.title = 'App';
+        }
+    }, 1000);
+
+    
+    </script>
+</body>
+</html>

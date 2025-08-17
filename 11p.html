@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11p</title>
+</head>
+<body>
+    <!-- Modify 11o so that if 'search' appears multiple times in the array, it will console.log() the index of the first appearance of 'search'. Use break; ['hello', 'world', 'search', 'good', search^ prime ]=>console. log(2) -->
+     <script>
+        let words = ['hello', 'world', 'search', 'good', 'search']; 
+
+        let index = -1;
+
+        for(let i = 0; i < words.length; i++) {
+            if (words[i] === 'search') {
+                index = i;
+                break; //same like previous question but here we use break to instantly stop the code words array find there search index.
+            }
+        }
+
+        console.log(index);
+
+        words = ['not', 'found'];
+        
+        index = -1;
+
+        for(let i = 0; i < words.length; i++) {
+            if(words[i] === 'search') {
+                index = i;
+                break;
+            }
+        }
+
+        console.log(index);
+     </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11o</title>
+</head>
+<body>
+    <!-- Create an array of strings, loop over the array, and check if the string 'search' is inside the array. If it is, console.log() the index of 'search' in in the array. If not, console.log '-1'.
+    ['hello', 'world', 'search', 'good'] => console.log(2)
+    ['not', 'found'] => console.log(-1) -->
+    <script>
+        let words = ['hello', 'world', 'search', 'good']; //Create an array.
+
+        let index = -1; //here we assume that search word is not in the array.
+
+        for(let i = 0; i < words.length; i++) { //Here we access each index of the code 
+            if (words[i] === 'search') { //Here we check if the word is 'search'
+                index = i; //make i = to index
+            }
+        }
+
+        console.log(index); //and log the index
+
+        //repeat what we did above for different values.
+        words = ['not', 'found'];
+        
+        index = -1;
+
+        for(let i = 0; i < words.length; i++) {
+            if(words[i] === 'search') {
+                index = i;
+            }
+        }
+
+        console.log(index);
+    </script>
+</body>
+</html>

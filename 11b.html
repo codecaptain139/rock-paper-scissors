@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11b</title>
+</head>
+<body>
+    <!-- Create a function getLastValue(array) that takes an array and returns the last value in the array. Hint: array indexes start at 0 so the last index is the number of values in the array minus 1
+    (lastIndex = array.length - 1).
+    getLastValue([1, 20, 22, 24, 5]) => 5
+    getLastValue(['hi', 'hello', 'good']) => 'good' -->
+    
+    <script>
+        function getlastValue(array) { //So on public demand we create a function name getlastValue which takes an array as an argument while calling the function.
+            const lastValue = array.length - 1; //We follow an algorithim to do the question so firstly we create a function then secondly we create a variable which stores the length of an array because to print the last value we also need to know the length of an array. So array length is 3 and array length - 1 = 2 which are the number of indexes in this array.
+            return array[lastValue]; //Here we access the last index value of that Array and return it.
+        }
+
+        const result = getlastValue(['hi', 'hello', 'good']); //Here we are invoking the function and we also pass an Array as an argument. And in result we are saving the value which gets return in the function.
+        console.log(result); // Here in the console I log the value of result.
+    </script>
+</body>
+</html>

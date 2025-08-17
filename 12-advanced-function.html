@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Function</title>
+</head>
+<body>
+    <button onclick="" class="js-button">Click</button>
+
+    <script>
+        // const buttonElement = document.querySelector('.js-button');
+
+        // const eventListener = () => {
+        //     console.log('click');
+        // };
+
+        // buttonElement.addEventListener('click', eventListener); //this method is like a onclick attribute and it have two parameter 1. Event for which you have to listen for. 2. We can run a function. Here in this situation the Event is click so when we click on the button function will run and our functions says that log 'click' in the console and we are using an arrow function.
+
+        // buttonElement.removeEventListener('click', eventListener); //Here we also pass two parameter 1st the event and second the function which we want to stop so in event we have to write the name of an event and in function we have to write full function so instead of doing that we store the function into an variable and then use that variable where we want to use.
+
+        // buttonElement.addEventListener('click', () => {
+        //     console.log('click2');
+        // }); //Why we use an Event Listner over an onclick attribute it's because we can give multiple event listeners for one event.
+
+    //     //There are some advantages of creating this function like it is easier to read and We can also use Hoisting which means we can declare it before its create;
+    //     greeting();
+    //    function greeting() {
+    //     console.log('hello');
+    //    }
+
+    //    greeting();
+
+    //    const num = 2;
+
+
+
+    // //    This function is same like above one.
+    //    const function1 = function() { //Now this greeting function is equal to variable function1 so now we can remove the name greeting and directly call the function by function1 name.
+    //     console.log('hello2'); //Now it's called Anonymous function (function without a name)
+    //    };
+
+    //    console.log(function1);
+    //    console.log(typeof function1);
+
+    //    function1();
+
+
+    // //    This is the method where a function is saved inside an object.
+    //    const object1 = {
+    //     num: 2,
+    //     fun: function() {
+    //         console.log('hello3');
+    //     }
+    //    };
+
+    //    object1.fun(); //In the key value fun this function is saved. //So second this is that if we can access the function by object1.fun then we can remove the name of the function from the object1
+
+    //    function display(param) {
+    //     console.log(param);
+    //    };
+
+    //    display(2); //This is called passing a value into a function.
+
+
+    // //    We can also pass function into a function.
+    // function run(param) { //Now in this case param contains a function.
+    //     param(); //Param is a function that's why we called it like a normal function.
+    // }
+
+    // //This is called callback function in which we pass a function inside another function.
+    // run(function() {
+    //     console.log('hello4') //Param is now a function which prints hello4
+    // });
+
+
+
+    // setTimeout(function() {
+    //     console.log('timeout');
+    //     console.log('timeout2')
+    // }, 3000); //This allows us to run a function in the future. It takes two parameters. 1st is a function we want to run in the future. 2nd how long to wait before running this function and here we put the value in millisecond and 1000 milisecond = 1sec.
+
+    // console.log('next line'); //As Java Script is a Asynchronous language so it won't wait for a line to finish before going to the next line. Above on the setTimeout function we set a time so it run after that time and this line will run before that code.
+
+    // //Advantage of being Asynchronous is that it doesn't block our code for 3 sec.
+
+    // setInterval(function() {
+    //     console.log('interval');
+    // }, 3000); //This is also a build in function is JS it also takes two parameters. 1st a function to run in the future. 2nd how long to wait. It means both the parameter is like setTimeout Function. Set Interval will keep running a function in the future.
+
+    // console.log('next line 2');
+
+    // [
+    //    'make dinner',
+    //    'wash dishes',
+    //    'watch youtube' 
+    // ].forEach((value, index) => { //Previously we learn for loop to loop through an array but .forEach is a array method which is preferred way to loop through an array. But in the for loop if we want to skip some value then we use continue but here if we want to skip something then we use return. But If you want to break a loop then you can't do it in this forEach then it's better to use a regular for loop.
+    //     if(value === 'make dinner') {
+    //         return; //Her we want to skip make dinner but this is not a for loop so we can't use continue that's why we use return.
+    //     }
+    //     console.log(index);
+    //     console.log(value);
+    // });
+
+
+    // const regularFunction = function(param, param2) {
+    //     console.log('hello');
+    //     return 5;
+    // };
+
+    // //This is arrow function it mostly work the same as regular function.
+    // const arrowFunction = (param, param2) => {
+    //     console.log('Hello');
+    //     return 5;
+    // };
+    // arrowFunction();
+
+    // const oneParam = (param) => { //This is arrow function and the name of the function is oneParam and (param) this is parameter. We can also remove these brackets when you have only one parameter.
+    //     console.log(param + 1);
+    // };
+
+    // oneParam(2);
+
+
+    // const oneLine = () => {
+    //     return 2 + 3;
+    // }; //This function have only one line so in this case we can also write this same function like this "const oneLine = () => 2 + 3;" it means we can remove curly brackets as well as return keyword.
+    // console.log(oneLine());
+
+    // const object2 = {
+    //     //One way is this to declare a function inside an object.
+    //     method: () => {
+
+    //     },
+
+    //     //Second way is this to declare a function inside an object.
+    //     method() {
+
+    //     }
+    // };
+
+
+    //Here we are learning filter method of an Array in which we use an arrow function which takes two parameters 1- Value and 2- Index.
+    // So what filter really does 1- It creates a new array[] 2- return true put the value in the new array. 3- return false to not put the value in the new array.
+     console.log([1, -3, 5].filter((value, index) => {
+        // if(value >= 0) {
+        //     return true;
+        // } else {
+        //     return false;
+        // }
+        return value >= 0; //This is shorthand version of above code.
+     })); //So now by using this filter method we filter out our data like here we only store the number which is equal or greater than 0 so it automatically removes -3
+
+
+
+     //Here we are learning map method this also takes two parameter 1- Value of the array 2- index of the array and it also store the returned value in the new array.
+     console.log([1, 1, 3].map((value, index) => {
+        return value * 2;
+     }));
+
+     //This is the short version to write the above code so when we have only one parameter then we can remove the brackets as well as return keyword and we make the code one liner.
+     console.log([1, 1, 3].map(value => value * 2 ));
+
+
+
+     //Now we learn Closure which means If a function has access to a value it will always have access to that value.
+    </script>
+</body>
+</html>

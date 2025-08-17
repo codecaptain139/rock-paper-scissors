@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12p</title>
+</head>
+<body>
+    <!-- Go back to the earlier exercises in lesson 12 (12c - 12i) and switch the code to use arrow functions. (When passing a function into another function, use arrow functions. Otherwise, you can use either syntax.) -->
+     <button class="js-button" onclick="updateButton()">Start</button>
+
+     <button class="cart-button" onclick="updateButton()">Add to cart</button>
+
+    <p class="added-para"></p>
+     <script>
+        // function updateButton() {
+        //     const button = document.querySelector('.js-button');
+
+        //     setTimeout(() => {
+        //         button.innerHTML = 'Finished!';
+        //     }, 1000);
+        // }
+
+        // function updateButton() {
+        //     const button = document.querySelector('.js-button');
+        //     button.innerText = 'Loading...';
+
+        //     setTimeout(() => {
+        //         button.innerHTML = 'Finished!';
+        //     }, 1000);
+        // }
+
+        function updateButton() {
+            const inputElement = document.querySelector('.added-para');
+            inputElement.innerText = 'Added';
+
+            setTimeout(() => {
+                inputElement.innerText = '';
+            }, 2000);
+        }
+     </script>
+</body>
+</html>

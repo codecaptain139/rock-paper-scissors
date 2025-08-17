@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11h</title>
+</head>
+<body>
+    <!-- - Create a function addOne(array) that takes an array of numbers and returns an array where each number is increased by 1.
+    addOne ([1, 2, 3]) => [2, 3, 4]
+    addOne([-2, -1, 0, 99]) => [-1, 0, 1, 100] -->
+    <script>
+        function addOne(array) { //In question clearly they mention to create a function name addOne which takes an array and return the array.
+            const newArray = []; //The return value get store into this array. Intially this is an empty array. 
+
+            for(let i = 0; i < array.length; i++) { //This is for loop which access the each and every index of array.
+                newArray.push(array[i] + 1); // here we are pushing the previous array value into that empty array by adding 1 into the value.
+            }
+
+            return newArray; //and in the last return the variable.
+        }
+
+        
+
+        console.log(addOne([1, 2, 3]));
+        console.log(addOne([-2, -1, 0, 99]));
+    </script>
+</body>
+</html>

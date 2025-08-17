@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9g</title>
+</head>
+<body>
+    <p>Amazon Shipping Calculator</p> <!--Again simple Paragraph with text Amazon Shipping Calculator-->
+
+    <input placeholder="Cost of order" class="js-cost-input" onkeydown="
+    handleCostKeydown(event);
+    "> <!--This is input tag which takes input as a text from the user and we have 3 attributes and one of them is onkeydown means when we touch or press the key then handleCostKeydown function will invoke with event parameter-->
+
+    <button onclick="
+    calculateTotal();
+    ">Calculate</button> <!--Here we again give onclick attribute to our Calculate button which invoke calculateTotal function when clicking to the Calculate button-->
+
+    <p class="js-total-cost"></p> <!--This is normal paragraph tag and here we also have one attribute class which gives the unique identity to this <p> tag-->
+
+    <script>
+      function handleCostKeydown(event) {
+      if (event.key === 'Enter') { //Here we are saying this if key is equal to 'Enter' then it will calculateTotal.
+        calculateTotal();
+      }
+    }
+
+      function calculateTotal() { //This is another function calculateTotal
+        const inputElement = document.querySelector('.js-cost-input'); // Here we let us put js-cost-input and storing it into inputElement variable.
+        let cost = Number(inputElement.value); //and here I am converting the value which I get from above input text into Number and storing it into cost variable
+
+        if(cost < 40) { //This is if else function and here I am checking that if the cost is less than 40 then add 10 into cos.
+          cost = cost + 10;
+        }
+
+        document.querySelector('.js-total-cost') //Here I am putting .js-total-cost para into JS and by dot notation innerHTML I am giving that para a string which says display the cost in dollar.
+        .innerHTML = `$${cost.toFixed(2)}`; //This method is used to fix the float number float number means decimal.
+      }
+
+        function subscribe() { //This is subscribe function
+          const buttonElement = document.querySelector('.js-subscribe-button'); //Here I am putting .js-subscribe-button into JS and storing it into buttonElement variable.
+
+          if (buttonElement.innerText === 'Subscribe') { //This is if-else control structure which saying that if buttonElement text is Subscribe then change it into subscribed otherwise let it be subscribe.
+          buttonElement.innerHTML = 'Subscribed'
+          } else {
+          buttonElement.innerHTML = 'Subscribe';
+          }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12o</title>
+</head>
+<body>
+    <!-- . Update exercise 12n to only remove the first 2 eggs from the array.
+    Again, use .filter() instead of a loop.
+    removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']) => ['apple', 'egg', 'ham'] -->
+    <script>
+        function removeEgg(foods) {
+            let eggCount = 0;
+
+            return foods.filter((food) => {
+                if(food === 'egg' && eggCount < 2) { //here we are saying that if the food is equal to egg string and eggCount is the variable where we store how many times eggs gets removed from the array.
+                    eggCount++;
+                    return false;
+                }
+
+                return true;
+            })
+        };
+
+        console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+    </script>
+</body>
+</html>

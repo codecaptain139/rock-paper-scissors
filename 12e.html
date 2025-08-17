@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12e</title>
+</head>
+<body>
+    <!-- . Create the 'Add to cart' button below. When clicking this button, display the message 'Added' below the button. Then, after 2 seconds, remove the message. -->
+     <button class="cart-button" onclick="updateButton()">Add to cart</button>
+     <p class="added-para"></p>
+     <script>
+        function updateButton() {
+            const inputElement = document.querySelector('.added-para');
+            inputElement.innerText = 'Added';
+
+            setTimeout(function(){
+                inputElement.innerText = '';
+            }, 2000);
+        }
+     </script>
+</body>
+</html>

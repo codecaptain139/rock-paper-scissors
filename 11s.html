@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11s</title>
+</head>
+<body>
+    <!-- Update exercise 11r to only remove the first 2 eggs from the array.
+    remo veEgg(['egg', 'apple', 'egg', 'egg', 'ham']) => ['apple', egg', 'ham'] -->
+
+    <script>
+        function removeEgg(foods) {
+            let result = [];
+            let eggsremoved = 0 //This question same like previous one but here we have to remove egg word only two times that's why we use eggsremoved variable.
+
+            for(let i = 0; i < foods.length; i++) {
+                if(foods[i] === 'egg' && eggsremoved < 2) {
+                    eggsremoved++;
+                    continue;
+                } 
+                  result.push(foods[i]);
+            }
+
+            return result;
+        }
+
+        console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+    </script>
+</body>
+</html>

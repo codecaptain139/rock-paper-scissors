@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11n</title>
+</head>
+<body>
+    <!-- Create a function countWords (words) that takes an array of strings and returns an object with how many times each string appeared. countWords (['apple', 'grape', 'apple', 'apple']) => { apple: 3, grape:1} (Hint: you can access a property using a variable: object[variable]; This uses the value inside the variable as the property name). -->
+     <script>
+        function countWords(words) { //A.T.Q Because the question says to create a function with that name.
+            const wordCounts = {}; //This object will store the final answer how many times each word appears.
+
+            for(let i = 0; i < words.length; i++) { //Loop through the every word of an array. 
+                const word = words[i]; //Store the each index of array.
+
+                if(wordCounts[word] === undefined) { //if 
+                wordCounts[word] = 1;
+            }   else {
+                wordCounts[word]++;
+            }
+        }
+
+            return wordCounts;
+        }
+
+        console.log(countWords(['apple', 'grapes', 'apple', 'apple']));
+        console.log(name);
+     </script>
+</body>
+</html>

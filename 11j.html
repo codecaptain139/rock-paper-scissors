@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11j</title>
+</head>
+<body>
+    <!-- Create a function addArrays (arrayl, array2) that takes 2 arrays of numbers and adds each number in the arrays together.
+    addArrays ([1, 1, 2], [1, 1, 3]) => [2, 2, 5]
+    addArrays([1, 2, 3], [4, 5, 6]) => [5, 7, 9] -->
+    <script>
+        function addArrays(array1, array2) { //A.T.Q we create a function which takes two array.
+            const newArray = []; // this is an empty array to store the new array value.
+
+            for(let i = 0; i < array1.length; i++) { // This line access the every index of both the arrays
+                newArray.push(array1[i] + array2[i]); //Here we are adding the index of array1 into the iindex of array2 and pushing it into newArray. 
+            }
+
+            return newArray; //Then in the last return the array.
+        }
+
+        //Invoking the function according to different values.
+        console.log(addArrays([1, 1, 2], [1, 1, 3]));
+        console.log(addArrays([1, 2, 3], [4, 5, 6]));
+    </script>
+</body>
+</html>

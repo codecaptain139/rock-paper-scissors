@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10e</title>
+    <style>
+        .gaming-button{
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .music-button{
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .tech-button{
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .is-toggled{
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button class="gaming-button">Gaming</button>
+    <button class="music-button">Music</button>
+    <button class="tech-button">Tech</button>
+
+    <script>
+        const btn = document.querySelector('.gaming-button');
+        btn.addEventListener('click', function() {
+            if(btn.classList.contains('is-toggled')) {
+            btn.classList.remove('is-toggled')
+        } else {
+            btn.classList.add('is-toggled')
+        }
+        });
+
+        const btn1 = document.querySelector('.music-button');
+        btn1.addEventListener('click', function() {
+            if(btn1.classList.contains('is-toggled')) {
+            btn1.classList.remove('is-toggled')
+        } else {
+            btn1.classList.add('is-toggled')
+        }
+        });
+
+        const btn2 = document.querySelector('.tech-button');
+        btn2.addEventListener('click', function() {
+            if(btn2.classList.contains('is-toggled')) {
+            btn2.classList.remove('is-toggled')
+        } else {
+            btn2.classList.add('is-toggled')
+        }
+        });
+    </script>
+</body>
+</html>

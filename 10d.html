@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10d</title>
+    <style>
+        .gaming-button{
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .is-toggled{
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button class="gaming-button">Gaming</button>
+
+    <script>
+        const element = document.querySelector('.gaming-button');
+        element.addEventListener('click', function() {
+            if(element.classList.contains('is-toggled')) {
+            element.classList.remove('is-toggled')
+        } else {
+            element.classList.add('is-toggled')
+        }
+        });
+    </script>
+</body>
+</html>

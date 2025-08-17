@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <button>hello</button>
+    <button class="js-button">Second Button</button>
+
+    <script>
+        console.log(document.querySelector('button').innerHTML); //Document.queryselector let us get any element from the page and put it inside javascript.
+        document.querySelector('button')
+            .innerHTML = 'Changed';
+
+        const buttonElement = document.querySelector('.js-button'); //.js-button means we are looking to access class attribute. This is called class-selector.
+        console.log(buttonElement);
+
+        // console.log(document.title);
+        // document.title = 'Changed';
+        
+        // console.log(document.body);
+        // console.log(typeof document.body); //Document is Object type.
+
+        // console.log(document.body.innerHTML);
+        // document.body.innerHTML = '<button> Good job! </button';
+
+        // document.body.innerHTML = 'hello';
+        // document.title = 'Good Job!'; // by using dot notation I have changed the title of the page.
+    </script>
+</body>
+</html>

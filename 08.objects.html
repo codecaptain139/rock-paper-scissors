@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+    //    const product = {
+    //     name: 'Socks',
+    //     price: 1090
+    //    };
+
+    //    console.log(typeof product);
+    //    console.log(product.name);
+    //    console.log(product.price);
+
+    //    product.name = 'Cotton Socks';
+    //    console.log(product);
+    //    console.log(product.name);
+
+    //    product.newproperty = true;
+    //    console.log(product);
+
+    //    delete product.newproperty;
+    //    console.log(product);
+
+    // const product2 = {
+    //     name: 'Shirt',
+    //     'delivery-time': '1 day',
+    //     rating: {
+    //         stars: 4.5,
+    //         count: 87
+    //     },
+    //     fun: function function1() {
+    //         console.log('function inside object');
+    //     }
+    // };
+
+    // console.log(product2);
+    // console.log(product2.name); //This is called dot notation to access the object value.
+    // console.log(product2['name']); //This is called bracket notation and this is also used to access the object value.
+    // console.log(product2['delivery-time']);
+
+    // console.log(product2.rating.count);
+    // product2.fun();
+
+    // console.log(typeof console.log);
+
+    // console.log(JSON.stringify(product2)); // This is the JSON build in object method to convert JavaScript Object to a JSON. JSON ek method hai data ko store and exchange karne ke liye use hota hai.And here we are converting Java Script object product2 into JSON object.
+
+    // const jsonString = JSON.stringify(product2);
+    // console.log(JSON.parse(jsonString)); //And here we are converting JSON object back into JavaScript object.
+
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());
+
+    const object1 = {
+        message: 'hello'
+    };
+    
+    const object2 = object1;
+
+    object1.message = 'Good job';
+    console.log(object1);
+    console.log(object2);
+
+    const object3 = {
+        message: 'Good Job!'
+    }
+
+
+    console.log(object3 === object1);
+    console.log(object2 === object1);
+
+    const object4 = {
+        message: 'Good Job!',
+        price: 799
+    }
+    // const message = object4.message; //These two lines have the same output but the way of writing the code is different in both situations.
+    const{ message, price } = object4;
+    console.log(message);
+    console.log(price);
+
+    const object5 = {
+        // message: message This is also same like the below line.
+        message,
+        // method: function function1() {
+        //     console.log('method');
+        // }
+        method() {
+            console.log('method');
+        }
+    };
+
+    console.log(object5);
+    object5.method();
+    </script>
+</body>
+</html>

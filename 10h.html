@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10h</title>
+    <style>
+       body {
+        font-family: Arial;
+      }
+
+      .cost-input{
+        font-size: 15px;
+        padding: 10px;
+      }
+
+      .calculate-button{
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 12px 15px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .error-message{
+        color: red;
+      }
+    </style>
+</head>
+<body>
+    <p>Amazon Shipping Calculator</p>
+
+    <input placeholder="Cost of order" class="js-cost-input cost-input" onkeydown="
+    handleCostKeydown(event);
+    ">
+    <button class="calculate-button" onclick="
+    calculateTotal();
+    ">Calculate</button>
+
+    <p class="js-total-cost"></p>
+
+
+    <!--Create a Variable to Display error message on the webpage.-->
+    <p class="js-error-message error-message"></p>
+
+    <script>
+
+      function handleCostKeydown(event) {
+        console.log(event.key); //Event is a object and Event.key is a dot notation to access the key which we press.
+      if (event.key === 'Enter') { //Here we are saying this if key is equal to 'Enter' then it will calculateTotal.
+        calculateTotal();
+      }
+    }
+
+      function calculateTotal() {
+        const inputElement = document.querySelector('.js-cost-input');
+        let cost = Number(inputElement.value);
+
+
+        //Reset all Preview messages.
+        document.querySelector('.js-total-cost').innerHTML = '';
+        document.querySelector('.js-error-message').innerHTML = '';
+
+        if(cost <= 0) {
+            document.querySelector('.js-error-message').innerHTML = 'Error: cost cannot be $0 and less than $0';
+            return;
+        }
+
+        if(cost < 40) {
+            cost += 10;
+        }
+
+        document.querySelector('.js-total-cost')
+        .innerHTML = `$${cost}`;
+      }
+
+      
+    </script>
+</body>
+</html>

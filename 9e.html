@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9e</title>
+</head>
+<body>
+    <input placeholder="Name" class="js-name-input" onkeydown="handleEnterKey(event)"> <!-- On this button we use 3 attributes Pehla placeholder dusra class third one is onkeydown which means Triggers when a key is pressed down (as soon as finger touches the key). -->
+
+    <button onclick="
+       const inputElement = document.querySelector('.js-name-input'); // Here I am putting js-name-input button into the JS and store it in a variable name inputElement.
+          document.querySelector('.js-message').innerHTML = `Your name is: ${inputElement.value}`; //Here I am putting js-message para into JS and update it by innerHTML method and giving it a string 'Your name is: ${inputElement.value}' by using dot value I can easily able to access the value which I am going to put in the input text box.
+    ">Submit</button>
+
+    <p class="js-message"></p> <!--And here I am printing that value.-->
+
+    <script>
+        function handleEnterKey(event) {
+          if(event.key === 'Enter') {
+                const inputElement = document.querySelector('.js-name-input');
+                document.querySelector('.js-message').innerHTML = `Your name is: ${inputElement.value}`;
+          }
+        }
+    </script>
+</body>
+</html>

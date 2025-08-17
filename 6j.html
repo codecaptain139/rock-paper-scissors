@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6j</title>
+</head>
+<body>
+    <script>
+        const randNumber = Math.random(); //It generates a random number between 0 and 1.
+
+        const result = randNumber < 0.5 ? 'heads' : 'tails'; //This is Ternary Operator it means if generated randonNumber is less than 0.5 then heads will be the answer.
+
+        console.log(randNumber);
+        const guess = 'heads'; //Here we are guessing what could be the answer in short this is our move.
+        console.log(guess === result ? 'You win!' : 'You Lose!'); //Here we are saying that if our move is equal to result then Print You win in the console otherwise print You lose.
+    </script>
+</body>
+</html>
